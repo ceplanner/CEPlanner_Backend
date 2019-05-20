@@ -3,7 +3,9 @@ const db = require("./dbConfig");
 module.exports = {
   find,
   add,
-  login
+  login,
+  addEvent,
+  getEvents
 };
 
 function find() {
@@ -16,4 +18,12 @@ function add(user) {
 
 function login(user) {
   return db("users").where(user);
+}
+
+function getEvents() {
+  return db("events");
+}
+
+function addEvent(event) {
+  return db("event").insert(event);
 }
