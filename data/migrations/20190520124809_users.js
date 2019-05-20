@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
       .notNullable()
       .unique();
     tbl.string("password").notNullable();
-    tbl.integer("yearOfBirth");
+    tbl.string("yearOfBirth");
     tbl.string("jobTitle");
     tbl.string("company");
   });
