@@ -3,16 +3,19 @@ const secrets = require("./data/secrets/secrets");
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const db = require("./data/dbHelper");
-const restricted = require("./data/middleware/restricted");
+// const restricted = require("./data/middleware/restricted");
 const session = require("express-session");
 const knexSessionStore = require("connect-session-knex")(session);
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
+const eventRouter = require("./routes/eventRoute");
 
 const server = express();
 
 server.use(cors());
 server.use(express.json());
+
+server.use("/api/events", eventRouter);
 
 const sessionConfig = {
   name: "cookie",
