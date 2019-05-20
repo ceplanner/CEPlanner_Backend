@@ -28,8 +28,8 @@ Registers one user given a valid information.
 
   * **Code:** 200 <br />
     **Content:**
-    ```json
-  {
+    ```
+    {
       "id": 4,
       "firstName": "test",
       "lastName": "test",
