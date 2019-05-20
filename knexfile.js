@@ -6,6 +6,14 @@ module.exports = {
     connection: {
       filename: "./data/lambda.db3"
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
+    migrations: {
+      // tableName: "knex_migrations",
+      directory: "./data/migrations"
+    },
+    seeds: {
+      // tableName: "knex_migrations",
+      directory: "./data/seeds"
+    }
   }
 };
