@@ -75,7 +75,8 @@ server.post("/api/login", (req, res) => {
         const token = generateToken(user);
         res.status(200).json({
           message: `Welcome User`,
-          token
+          token,
+          user
         });
       } else {
         res.status(404).json({ message: "Invalid Login" });
