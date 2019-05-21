@@ -3,8 +3,11 @@ exports.up = function(knex, Promise) {
     tbl.increments();
     tbl.string("eventName").notNullable();
     tbl.string("eventType").notNullable();
-    tbl.string("description");
-    tbl.integer("eventBudget");
+    tbl.string("eventDate");
+    tbl.string("eventDescription");
+    tbl.string("eventBudget");
+    tbl.string("location");
+    tbl.string("agenda");
     tbl
       .integer("user_id")
       .unsigned()
