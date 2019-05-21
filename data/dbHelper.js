@@ -5,7 +5,9 @@ module.exports = {
   add,
   login,
   addEvent,
-  getEvents
+  getEvents,
+  removeEvent,
+  updateEvent
 };
 
 function find() {
@@ -25,5 +27,17 @@ function getEvents() {
 }
 
 function addEvent(event) {
-  return db("event").insert(event);
+  return db("events").insert(event);
+}
+
+function updateEvent(id, event) {
+  return db("events")
+    .where("id", Number(id))
+    .update(event);
+}
+
+function removeEvent(id) {
+  return db("events")
+    .where("id", Number(id))
+    .del();
 }
