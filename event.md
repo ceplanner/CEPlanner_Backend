@@ -53,10 +53,10 @@
 ]
 
 
-    **Post new event**
+    
 ----
 
-
+**Post new event**
 * **URL**
 
   /api/events
