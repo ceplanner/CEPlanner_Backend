@@ -14,8 +14,9 @@
   * **Success Response:**
 
   * **Code:** 200 <br />
+  ```
     **Content:**
-    ```[
+    [
   {
     "id": 7,
     "eventName": "End Of Year Party",
@@ -50,11 +51,12 @@
     "user_id": 1
   },
 ]
-```
+
+
     **Post new event**
 ----
 
-
+```
 * **URL**
 
   /api/events
@@ -64,7 +66,7 @@
   `POST`
 
   **Required:**
-  ```eventName=[string]
+ eventName=[string]
  eventType=[string]
  eventDate=[string]
  eventDescription=[string]
