@@ -91,3 +91,45 @@
 }
   
   ```
+  ----
+  **Update Events**
+
+* **URL**
+
+  /api/events/:id
+
+* **Method:**
+
+  `PUT`
+
+  * **Success Response:**
+
+  * **Code:** 200 <br />
+  ```
+    **Content:**
+  {
+    "id": 7,
+    "eventName": "End Of Year Party",
+    "eventType": "Celebration",
+    "eventDate": "03/12/2019",
+    "eventDescription": "Celebrating another year of success",
+    "eventBudget": "1000",
+    "location": "room 220",
+    "agenda": "agenda for event",
+    "user_id": 1
+  },
+----
+
+**Delete event**
+* **URL**
+
+  /api/events/:id
+
+* **Method:**
+
+  `DELETE`
+
+  **Example Body**
+```No Response```
+
+  
