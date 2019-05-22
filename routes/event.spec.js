@@ -97,7 +97,7 @@ describe("sever", () => {
 
     it("should return a status 500 on failed put", async () => {
       const event = {
-        invaild: "put",
+        invalid: "put",
         eventType: "Test Type",
         eventDate: "03/12/2019",
         eventDescription: "Test Description",
