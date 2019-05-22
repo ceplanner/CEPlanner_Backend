@@ -17,7 +17,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch --verbose",
     "server": "nodemon index.js",
     "start": "node index.js"
   },
