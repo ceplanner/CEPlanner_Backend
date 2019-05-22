@@ -15,8 +15,7 @@
 
   * **Code:** 200 <br />
     **Content:**
-    ```
-  [
+    ```[
   {
     "id": 7,
     "eventName": "End Of Year Party",
@@ -65,8 +64,7 @@
   `POST`
 
   **Required:**
-  ```
- eventName=[string]
+  ```eventName=[string]
  eventType=[string]
  eventDate=[string]
  eventDescription=[string]
