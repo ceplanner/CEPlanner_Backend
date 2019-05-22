@@ -56,7 +56,7 @@
     **Post new event**
 ----
 
-```
+
 * **URL**
 
   /api/events
@@ -64,7 +64,7 @@
 * **Method:**
 
   `POST`
-
+```
   **Required:**
  eventName=[string]
  eventType=[string]
