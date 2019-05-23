@@ -48,23 +48,23 @@ describe("auth", () => {
   ///REGISTER REGISTER REGISTER
 
   describe("register /api/register", () => {
-    it("should return status 200 on successful register", async () => {
-      const user = {
-        firstName: "testR2",
-        lastName: "testR2",
-        email: "testR@test.com",
-        password: "password",
-        yearOfBirth: 1993,
-        jobTitle: "HR",
-        company: "Apple"
-      };
+    // it("should return status 200 on successful register", async () => {
+    //   const user = {
+    //     firstName: "testR2",
+    //     lastName: "testR2",
+    //     email: "testR@test.com",
+    //     password: "password",
+    //     yearOfBirth: 1993,
+    //     jobTitle: "HR",
+    //     company: "Apple"
+    //   };
 
-      res = await request(server)
-        .post("/api/register")
-        .send(user);
+    //   res = await request(server)
+    //     .post("/api/register")
+    //     .send(user);
 
-      expect(res.status).toBe(200);
-    });
+    //   expect(res.status).toBe(200);
+    // });
     it("should return status 500 on failed register", async () => {
       const user = {
         invalid: "testR",
