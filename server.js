@@ -74,7 +74,9 @@ server.post("/api/login", (req, res) => {
       if (user && bcrypt.compareSync(password, user.password)) {
         const token = generateToken(user);
         res.status(200).json({
-          message: `Welcome User, token: ${token}`
+          message: `Welcome User`,
+          token,
+          user
         });
       } else {
         res.status(404).json({ message: "Invalid Login" });
@@ -88,7 +90,7 @@ server.post("/api/login", (req, res) => {
 function generateToken(user) {
   console.log(user);
   const payload = {
-    subject: user.id,
+    user: user.id,
     email: user.email
   };
 
@@ -110,6 +112,22 @@ server.get("/api/logout", (req, res) => {
   } else {
     res.end();
   }
+});
+
+server.get("/api/users/:id/events", (req, res) => {
+  const { id } = req.params;
+  const user = db.user(id);
+  const events = db.events(id);
+
+  Promise.all([user, events])
+    .then(values => {
+      let [user, events] = values;
+      user = user[0];
+      res.status(200).json({ ...user, events: events });
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
 });
 
 module.exports = server;

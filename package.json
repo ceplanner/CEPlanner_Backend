@@ -6,16 +6,18 @@
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
     "express-session": "^1.16.1",
+    "jest": "^24.8.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.16.5",
-    "sqlite3": "^4.0.8"
+    "sqlite3": "^4.0.8",
+    "supertest": "^4.0.2"
   },
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch --verbose",
     "server": "nodemon index.js",
     "start": "node index.js"
   },
